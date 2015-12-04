@@ -287,6 +287,8 @@ int main()
 	int route[10],i;
 	int *size=(int *)malloc(sizeof(int));
 	int** matrix;
+    int** distance;
+    int** connection;
 	while(1)
 	{
 		printPrompt();
@@ -297,7 +299,6 @@ int main()
 				 if(matrix==0)
 					break;
 				 printTopology(matrix,size);
-				 int **distance, **connection;
 				 distance = (int **)malloc((*size) * sizeof(int *));
 				 connection = (int **)malloc((*size) * sizeof(int *));
 				 for(i=0;i<(*size);i++)
@@ -348,7 +349,7 @@ int main()
 						free(matrix);
 				  	  if(size!=NULL)
 				  		free(size);
-                      if(destination!=NULL)
+                      if(distance!=NULL)
                         free(matrix);
                       if(connection!=NULL)
                         free(size);
