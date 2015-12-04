@@ -134,11 +134,11 @@ void findPath(int** connection, int** distance,int source, int dest)
     	for (index= 0; index<count+1; index++ )
 		{
 			if (index==0)
-				printf("%d ->",path[index]+1);
+				printf("R%d ->",path[index]+1);
     		else if (index==count)
-				printf(" %d",path[index]+1);
+				printf(" R%d",path[index]+1);
     		else
-				printf( " %d ->", (path[index]+1));
+				printf( " R%d ->", (path[index]+1));
     	}
     	printf("\n\n\tCost of Route : %d\n",distance[source-1][dest-1]);
     }
